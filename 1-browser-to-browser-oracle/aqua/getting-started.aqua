@@ -1,0 +1,24 @@
+import "@fluencelabs/aqua-lib/builtin.aqua"
+import Peer from "@fluencelabs/aqua-lib/builtin.aqua" -- (1)
+
+-- The service runs inside browser
+service HelloPeer("HelloPeer"):
+    hello(from: PeerId) -> string
+
+
+
+service HelloWorld("hello-world"):                    -- (2)
+    hello(str: string)
+    getFortune() -> string
+
+func sayHello():                                      -- (3)
+    HelloWorld.hello("Hello, world!")
+
+func tellFortune() -> string:                         -- (4)
+    res <- HelloWorld.getFortune()
+    <- res
+
+func getRelayTime() -> u64:                           -- (5)
+    on HOST_PEER_ID:
+        ts <- Peer.timestamp_ms()
+    <- ts

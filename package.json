@@ -1,0 +1,23 @@
+{
+  "name": "reed",
+  "version": "1.0.0",
+  "description": "zkreed is a proof of concept tarot game, assembled to numeric arithmetic signifiers for inspection. like \"counting cards\" for tarots.",
+  "main": "run.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moskalyk/zkreed.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moskalyk/zkreed/issues"
+  },
+  "homepage": "https://github.com/moskalyk/zkreed#readme",
+  "dependencies": {
+    "cli-prompt": "^0.6.0",
+    "snarkyjs": "^0.5.1"
+  }
+}

@@ -42,8 +42,12 @@ const tarot = [
 export class Reed extends SmartContract {
 	@state(Field) spread = State<Field>();
 
-	@method pull(){
+  constructor(pbKey: any){
+    this.super(pbKey)
+  }
 
+	@method pull(){
+    console.log('testing')
 	}
 	// get card, loop on index of list of elements, compute dot product to running sum
 	// make sure to do indexed pulls on, what does this mean?
