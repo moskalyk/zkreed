@@ -7,6 +7,8 @@ where for 9 card readings, oracle's card placements become adjusted for equilibr
 
 e.g
 
+![spread](./spread.png)
+
 | [ -2 ] | _3_ | [  ] | *			| [ 1 ] | _3_ | [  ] | 
 |  _1_   | ___ |  __  |		vs		|  _1_  | ___ |  __  |  
 | [   ]  | ___ | [  ] |				| [   ] | ___ | [  ] |
