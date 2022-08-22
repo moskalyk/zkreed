@@ -85,6 +85,7 @@ function Oracle() {
                   console.log(str);
                 },
                 getFortune: async () => {
+                  
                   await new Promise((resolve) => {
                     setTimeout(resolve, 1000);
                   });
@@ -112,6 +113,8 @@ function Oracle() {
 
         // console.log(await tellFortune()); // (6)
 
+        // 
+        // send transaction, take result, and send to fluence peer with mina smart contract, return computation. 
         const relayTime = await getRelayTime();
 
         // console.log(`The relay time is: ${relayTime}`);
@@ -310,26 +313,13 @@ function Spread() {
             var cd: any = (document?.getElementsByClassName('container')[0] as HTMLElement | null)?.shadowRoot?.getElementById('cd');
 
             cd.onchange = async function(el: any) {
-              // your logic
-              console.log(el)
-              console.log(el.target.value)
               if(el.target.value){
-
-                  const relayTime = await getRelayTime();
-
-                    // console.log(`The relay time is: ${relayTime}`);
-                  const getRandom = Math.floor([...Array(relayTime % 78).keys()].reduce((x,y) => x + Math.abs(Math.tan(y)))%78)
-
-                // 
-
-                // const getRandom = Math.floor(Math.random() * 12)
-                // const random = Arry(Math.tan()
+                const relayTime = await getRelayTime();
+                const getRandom = Math.floor([...Array(relayTime % 78).keys()].reduce((x,y) => x + Math.abs(Math.tan(y)))%78)
                 if(count == 0) card1Set(String(getRandom))
                 else if(count == 1) card2Set(String(getRandom))
                 else if(count == 2) card3Set(String(getRandom))
                 count++;
-
-
               }
             }
 
